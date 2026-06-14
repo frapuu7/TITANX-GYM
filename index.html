@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TitanX Fitness</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+        <div class="container">
+
+            <a class="navbar-brand logo" href="#">
+                TITANX
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Planes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trainers">Entrenadores</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#store">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>TRANSFORMA TU CUERPO</h1>
+
+            <p>
+                Entrena como un atleta profesional con TitanX Fitness
+            </p>
+
+          <a href="login.html" class="btn btn-danger btn-lg">
+    Comenzar Ahora
+</a>
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features container py-5">
+
+        <div class="row text-center">
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-dumbbell"></i>
+
+                    <h3>Entrenamiento PRO</h3>
+
+                    <p>
+                        Rutinas personalizadas para maximizar resultados.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-heart-pulse"></i>
+
+                    <h3>Salud Integral</h3>
+
+                    <p>
+                        Monitoreo físico y seguimiento profesional.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                    <h3>Alto Rendimiento</h3>
+
+                    <p>
+                        Lleva tu cuerpo al siguiente nivel.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PLANES -->
+
+    <section class="plans py-5" id="plans">
+
+        <div class="container">
+
+            <h2 class="text-center mb-5 section-title">
+                MEMBRESÍAS
+            </h2>
+
+            <div class="row">
+
+                <div class="col-md-4">
+
+                    <div class="plan-card">
+
+                        <h3>Basic</h3>
+
+                        <h1 class="plan-price">$499</h1>
+                        <p class="plan-duration">por mes</p>
+
+                        <p class="plan-desc">Acceso General</p>
+
+                        <ul class="plan-features">
+                            <li><i class="fa-solid fa-check"></i> Acceso al gimnasio en horario general</li>
+                            <li><i class="fa-solid fa-check"></i> Vestidores y regaderas</li>
+                            <li><i class="fa-solid fa-check"></i> Evaluación física inicial</li>
+                            <li><i class="fa-solid fa-check"></i> App de seguimiento</li>
+                            <li><i class="fa-solid fa-xmark"></i> Entrenador personal</li>
+                            <li><i class="fa-solid fa-xmark"></i> Acceso a clases grupales</li>
+                        </ul>
+
+                        <button class="btn btn-outline-light" onclick="location.href='login.html'">
+                            Elegir
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="plan-card premium">
+
+                        <div class="plan-badge">MÁS POPULAR</div>
+
+                        <h3>Pro</h3>
+
+                        <h1 class="plan-price">$899</h1>
+                        <p class="plan-duration">por mes</p>
+
+                        <p class="plan-desc">Entrenador Personal</p>
+
+                        <ul class="plan-features">
+                            <li><i class="fa-solid fa-check"></i> Acceso ilimitado al gimnasio</li>
+                            <li><i class="fa-solid fa-check"></i> Vestidores y regaderas VIP</li>
+                            <li><i class="fa-solid fa-check"></i> Evaluación física completa</li>
+                            <li><i class="fa-solid fa-check"></i> App de seguimiento premium</li>
+                            <li><i class="fa-solid fa-check"></i> Entrenador personal 2x/semana</li>
+                            <li><i class="fa-solid fa-check"></i> Clases grupales ilimitadas</li>
+                        </ul>
+
+                        <button class="btn btn-danger" onclick="location.href='login.html'">
+                            Elegir
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="plan-card">
+
+                        <h3>Elite</h3>
+
+                        <h1 class="plan-price">$1499</h1>
+                        <p class="plan-duration">por mes</p>
+
+                        <p class="plan-desc">Acceso VIP Total</p>
+
+                        <ul class="plan-features">
+                            <li><i class="fa-solid fa-check"></i> Acceso 24/7 al gimnasio</li>
+                            <li><i class="fa-solid fa-check"></i> Vestidores y regaderas VIP</li>
+                            <li><i class="fa-solid fa-check"></i> Evaluación física avanzada</li>
+                            <li><i class="fa-solid fa-check"></i> App de seguimiento premium</li>
+                            <li><i class="fa-solid fa-check"></i> Entrenador personal 4x/semana</li>
+                            <li><i class="fa-solid fa-check"></i> Clases grupales + asesoría nutricional</li>
+                        </ul>
+
+                        <button class="btn btn-outline-light" onclick="location.href='login.html'">
+                            Elegir
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ENTRENADORES -->
+
+    <section class="trainers container py-5" id="trainers">
+
+        <h2 class="text-center section-title mb-5">
+            ENTRENADORES
+        </h2>
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <div class="trainer-card" onclick="openTrainerModal(0)">
+
+                    <img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=1000"
+                        alt="trainer">
+
+                    <div class="trainer-info">
+                        <h3>Carlos Vega</h3>
+                        <p>Crossfit Coach</p>
+                        <div class="trainer-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="trainer-card" onclick="openTrainerModal(1)">
+
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000"
+                        alt="trainer">
+
+                    <div class="trainer-info">
+                        <h3>Andrea Fit</h3>
+                        <p>Fitness Trainer</p>
+                        <div class="trainer-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="trainer-card" onclick="openTrainerModal(2)">
+
+                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000"
+                        alt="trainer">
+
+                    <div class="trainer-info">
+                        <h3>Mike Power</h3>
+                        <p>Bodybuilding Coach</p>
+                        <div class="trainer-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- TRAINER MODAL -->
+
+    <div class="custom-modal" id="trainerModal">
+
+        <div class="modal-content-custom trainer-modal-content">
+
+            <div class="trainer-modal-header">
+
+                <img id="trainerModalImg" src="" alt="trainer">
+
+                <div>
+
+                    <h2 id="trainerModalName"></h2>
+
+                    <p id="trainerModalRole"></p>
+
+                    <div class="trainer-rating" id="trainerModalRating"></div>
+
+                </div>
+
+            </div>
+
+            <div class="trainer-modal-body">
+
+                <div class="trainer-detail">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span><strong>Experiencia:</strong> <span id="trainerModalExp"></span></span>
+                </div>
+
+                <div class="trainer-detail">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <span><strong>Especialidad:</strong> <span id="trainerModalSpecialty"></span></span>
+                </div>
+
+                <div class="trainer-detail">
+                    <i class="fa-solid fa-users"></i>
+                    <span><strong>Alumnos:</strong> <span id="trainerModalStudents"></span></span>
+                </div>
+
+                <div class="trainer-detail">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span><strong>Certificación:</strong> <span id="trainerModalCert"></span></span>
+                </div>
+
+                <p id="trainerModalBio" class="trainer-bio"></p>
+
+            </div>
+
+            <div class="modal-buttons">
+
+                <button class="save-btn" onclick="selectTrainer()">
+                    <i class="fa-solid fa-check"></i> Seleccionar Entrenador
+                </button>
+
+                <button class="cancel-btn" onclick="closeTrainerModal()">
+                    Cerrar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TIENDA -->
+
+    <section class="store py-5" id="store">
+
+        <div class="container">
+
+            <h2 class="text-center section-title mb-2">
+                TIENDA TITANX
+            </h2>
+
+            <p class="text-center text-muted mb-5">
+                Todo lo que necesitas para potenciar tu rendimiento
+            </p>
+
+            <div class="row">
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1593095948071-474c5cc2f1f1?q=80&w=200&h=200&fit=crop');"></div>
+                        <h3>Proteínas</h3>
+                        <p class="product-desc">Whey Protein, Caseína, Proteína Vegana y más.</p>
+                        <p class="product-brands">Optimum Nutrition · Dymatize · MuscleTech · BSN</p>
+                        <p class="product-price">Desde $599</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=200&h=200&fit=crop');"></div>
+                        <h3>Pre-Entrenos</h3>
+                        <p class="product-desc">Explosión de energía, foco y rendimiento máximo.</p>
+                        <p class="product-brands">C4 · Bucked Up · Gorilla Mind · Total War</p>
+                        <p class="product-price">Desde $349</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=200&h=200&fit=crop');"></div>
+                        <h3>Ropa Deportiva</h3>
+                        <p class="product-desc">Playeras, shorts, leggings, sudaderas y más.</p>
+                        <p class="product-brands">Nike · Under Armour · Gymshark · Adidas</p>
+                        <p class="product-price">Desde $299</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=200&h=200&fit=crop');"></div>
+                        <h3>Accesorios</h3>
+                        <p class="product-desc">Guantes, correas, rodilleras, botellas y toallas.</p>
+                        <p class="product-brands">Harbinger · Schiek · Rogue · Fitbit</p>
+                        <p class="product-price">Desde $149</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1523362628745-0c100150b504?q=80&w=200&h=200&fit=crop');"></div>
+                        <h3>Bebidas</h3>
+                        <p class="product-desc">Bebidas isotónicas, electrolitos, aguas saborizadas.</p>
+                        <p class="product-brands">Gatorade · Powerade · Electrolit · SueroX</p>
+                        <p class="product-price">Desde $25</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card">
+                        <div class="product-img" style="background-image:url('https://images.unsplash.com/photo-1622484212046-c0203ad1c0f7?q=80&w=200&h=200&fit=crop');"></div>
+                        <h3>Snacks Saludables</h3>
+                        <p class="product-desc">Barras proteicas, colaciones, frutos secos.</p>
+                        <p class="product-brands">Quest · Built Bar · Nature Valley · Think!</p>
+                        <p class="product-price">Desde $39</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="login.html" class="btn btn-danger btn-lg">
+                    <i class="fa-solid fa-cart-shopping"></i> Visitar Tienda
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACTO -->
+
+    <section class="contact py-5" id="contact">
+
+        <div class="container text-center">
+
+            <h2 class="section-title mb-4">
+                CONTACTO
+            </h2>
+
+            <p>Email: titanxfitness@gmail.com</p>
+
+            <p>Tel: +52 449 000 0000</p>
+
+            <div class="socials">
+
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-tiktok"></i>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 TitanX Fitness - Todos los derechos reservados
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+
+    <script src="js/app.js"></script>
+
+    <script>
+        const trainersData = [
+            {
+                name: 'Carlos Vega',
+                role: 'Crossfit Coach',
+                img: 'https://images.unsplash.com/photo-1567013127542-490d757e51fc?q=80&w=1000',
+                rating: 4.5,
+                exp: '8 años',
+                specialty: 'Crossfit, HIIT, Calistenia',
+                students: '320+',
+                cert: 'CrossFit Level 3 Trainer',
+                bio: 'Ex atleta profesional con más de 8 años transformando vidas a través del CrossFit. Especializado en entrenamientos de alta intensidad y acondicionamiento físico. Su método combina disciplina militar con técnica deportiva de alto rendimiento.'
+            },
+            {
+                name: 'Andrea Fit',
+                role: 'Fitness Trainer',
+                img: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000',
+                rating: 5.0,
+                exp: '6 años',
+                specialty: 'Fitness, Yoga, Pilates',
+                students: '500+',
+                cert: 'NASM Certified Personal Trainer',
+                bio: 'Apasionada del bienestar integral, Andrea combina entrenamiento funcional con yoga y pilates para lograr cuerpos equilibrados y saludables. Su enfoque holístico ha ayudado a cientos de mujeres y hombres a alcanzar sus metas.'
+            },
+            {
+                name: 'Mike Power',
+                role: 'Bodybuilding Coach',
+                img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1000',
+                rating: 5.0,
+                exp: '10 años',
+                specialty: 'Bodybuilding, Powerlifting, Nutrición',
+                students: '280+',
+                cert: 'IFBB Pro League Coach',
+                bio: 'Campeón nacional de bodybuilding con una década de experiencia en culturismo y powerlifting. Especializado en transformaciones extremas, preparación para competencias y asesoría nutricional deportiva.'
+            }
+        ];
+
+        function openTrainerModal(index) {
+            const t = trainersData[index];
+            document.getElementById('trainerModalImg').src = t.img;
+            document.getElementById('trainerModalName').textContent = t.name;
+            document.getElementById('trainerModalRole').textContent = t.role;
+            document.getElementById('trainerModalExp').textContent = t.exp;
+            document.getElementById('trainerModalSpecialty').textContent = t.specialty;
+            document.getElementById('trainerModalStudents').textContent = t.students;
+            document.getElementById('trainerModalCert').textContent = t.cert;
+            document.getElementById('trainerModalBio').textContent = t.bio;
+
+            let stars = '';
+            const full = Math.floor(t.rating);
+            const half = t.rating % 1 !== 0;
+            for (let i = 0; i < 5; i++) {
+                if (i < full) stars += '<i class="fa-solid fa-star"></i>';
+                else if (half && i === full) stars += '<i class="fa-solid fa-star-half-stroke"></i>';
+                else stars += '<i class="fa-regular fa-star"></i>';
+            }
+            stars += ' <span>' + t.rating + '</span>';
+            document.getElementById('trainerModalRating').innerHTML = stars;
+
+            document.getElementById('trainerModal').style.display = 'flex';
+        }
+
+        function closeTrainerModal() {
+            document.getElementById('trainerModal').style.display = 'none';
+        }
+
+        function selectTrainer() {
+            closeTrainerModal();
+            window.location.href = 'login.html';
+        }
+
+        document.getElementById('trainerModal').addEventListener('click', function(e) {
+            if (e.target === this) closeTrainerModal();
+        });
+    </script>
+
+</body>
+
+</html>

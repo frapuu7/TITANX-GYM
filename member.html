@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta | TitanX Fitness</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<script src="js/auth.js"></script>
+
+<body class="dashboard-body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>TITANX</h2>
+        <ul>
+            <li><a href="#" onclick="showSection('inicio')"><i class="fa-solid fa-house"></i> Inicio</a></li>
+            <li><a href="#" onclick="showSection('plan')"><i class="fa-solid fa-clipboard-list"></i> Mi Plan</a></li>
+            <li><a href="#" onclick="showSection('rutinas')"><i class="fa-solid fa-dumbbell"></i> Mis Rutinas</a></li>
+            <li><a href="#" onclick="showSection('dietas')"><i class="fa-solid fa-apple-alt"></i> Mis Dietas</a></li>
+            <li><a href="#" onclick="showSection('coach')"><i class="fa-solid fa-user-tie"></i> Mi Coach</a></li>
+            <li><a href="#" onclick="showSection('horarios')"><i class="fa-solid fa-clock"></i> Horarios</a></li>
+            <li><a href="#" onclick="showSection('pagos')"><i class="fa-solid fa-credit-card"></i> Mis Pagos</a></li>
+            <li><a href="#" onclick="showSection('perfil')"><i class="fa-solid fa-user-gear"></i> Mi Perfil</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-content">
+
+        <!-- PAYMENT ALERT BANNER -->
+        <div id="paymentAlert" class="payment-alert" style="display:none;">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            <span id="paymentAlertText"></span>
+            <button onclick="showSection('pagos')" class="alert-pay-btn">Pagar Ahora</button>
+            <button onclick="dismissAlert()" class="alert-close-btn"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="topbar">
+            <h1 id="sectionTitle">Inicio</h1>
+            <div class="profile-area">
+                <span id="userNameDisplay" class="user-greeting"></span>
+                <button onclick="logout()" class="logout-btn">Salir</button>
+            </div>
+        </div>
+
+        <!-- ===== INICIO ===== -->
+        <div id="section-inicio" class="section-content">
+            <div class="welcome-card">
+                <h2>¡Bienvenido, <span id="welcomeName">Miembro</span>!</h2>
+                <p>Estamos listos para ayudarte a alcanzar tus metas fitness.</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card member-stat">
+                    <i class="fa-solid fa-dumbbell"></i>
+                    <div><h2 id="memberRoutineCount">0</h2><p>Rutinas Activas</p></div>
+                </div>
+                <div class="stat-card member-stat">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <div><h2 id="memberCheckinCount">0</h2><p>Registros Este Mes</p></div>
+                </div>
+                <div class="stat-card member-stat">
+                    <i class="fa-solid fa-apple-alt"></i>
+                    <div><h2 id="memberDietCount">0</h2><p>Planes de Dieta</p></div>
+                </div>
+                <div class="stat-card member-stat">
+                    <i class="fa-solid fa-clock"></i>
+                    <div><h2 id="memberNextClass">—</h2><p>Próxima Clase</p></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h3>Próxima Rutina</h3>
+                        <div id="nextWorkout"><p class="text-muted">Sin rutinas asignadas</p></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="info-card">
+                        <h3>Estado de Membresía</h3>
+                        <div id="memberStatusCard">
+                            <p class="text-muted">Cargando...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MI PLAN ===== -->
+        <div id="section-plan" class="section-content" style="display:none;">
+            <div class="users-section">
+                <div class="users-header">
+                    <h2>Mi Plan Personalizado</h2>
+                    <button class="add-user-btn" onclick="showPlanForm()"><i class="fa-solid fa-rotate"></i> Regenerar Plan</button>
+                </div>
+                <div id="planDisplay"></div>
+            </div>
+
+            <div id="planFormContainer" class="plan-form-container" style="display:none;">
+                <div class="plan-form-card">
+                    <h3>Genera tu plan de entrenamiento y nutrición</h3>
+                    <p class="text-muted">Completa tus datos para obtener una rutina y dieta personalizada.</p>
+                    <div class="plan-form-fields">
+                        <div class="plan-field">
+                            <label>Peso (kg)</label>
+                            <input type="number" id="planWeight" class="search-input" placeholder="Ej: 75" min="30" max="300" step="0.1">
+                        </div>
+                        <div class="plan-field">
+                            <label>Altura (cm)</label>
+                            <input type="number" id="planHeight" class="search-input" placeholder="Ej: 175" min="100" max="250">
+                        </div>
+                        <div class="plan-field">
+                            <label>Nivel de entrenamiento</label>
+                            <select id="planLevel" class="search-input">
+                                <option value="principiante">Principiante</option>
+                                <option value="intermedio">Intermedio</option>
+                                <option value="avanzado">Avanzado</option>
+                            </select>
+                        </div>
+                        <div class="plan-field">
+                            <label>Objetivo</label>
+                            <select id="planGoal" class="search-input">
+                                <option value="tonificar">Tonificar / Definición</option>
+                                <option value="volumen">Ganar Masa Muscular</option>
+                                <option value="perder_peso">Perder Peso</option>
+                            </select>
+                        </div>
+                        <button onclick="generatePlan()" class="save-btn plan-generate-btn">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Generar mi Plan
+                        </button>
+                        <button onclick="hidePlanForm()" class="cancel-btn">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MIS RUTINAS ===== -->
+        <div id="section-rutinas" class="section-content" style="display:none;">
+            <div class="users-section">
+                <div class="users-header">
+                    <h2>Mis Rutinas de Entrenamiento</h2>
+                </div>
+                <div id="routinesList"></div>
+            </div>
+        </div>
+
+        <!-- ===== MIS DIETAS ===== -->
+        <div id="section-dietas" class="section-content" style="display:none;">
+            <div class="users-section">
+                <div class="users-header">
+                    <h2>Mis Planes de Alimentación</h2>
+                </div>
+                <div id="dietsList"></div>
+            </div>
+        </div>
+
+        <!-- ===== MI COACH ===== -->
+        <div id="section-coach" class="section-content" style="display:none;">
+            <div class="users-section">
+                <div class="users-header">
+                    <h2>Mi Entrenador</h2>
+                </div>
+                <div id="coachInfo"></div>
+            </div>
+        </div>
+
+        <!-- ===== HORARIOS ===== -->
+        <div id="section-horarios" class="section-content" style="display:none;">
+            <div class="users-section">
+                <div class="users-header">
+                    <h2>Horario de Clases</h2>
+                </div>
+                <div id="scheduleGrid"></div>
+            </div>
+        </div>
+
+        <!-- ===== MIS PAGOS ===== -->
+        <div id="section-pagos" class="section-content" style="display:none;">
+            <div class="users-section">
+                <div class="users-header">
+                    <h2>Historial de Pagos</h2>
+                    <button class="add-user-btn" onclick="openCardPayment()"><i class="fa-solid fa-credit-card"></i> Pagar Ahora</button>
+                </div>
+                <div id="nextPaymentInfo" class="next-payment-info"></div>
+                <div id="paymentsList"></div>
+            </div>
+        </div>
+
+        <!-- CARD PAYMENT MODAL -->
+        <div class="custom-modal" id="cardPaymentModal">
+            <div class="modal-content-custom card-modal">
+                <h2><i class="fa-solid fa-credit-card" style="color:#ff3131"></i> Pago con Tarjeta</h2>
+                <p class="text-muted">Simulación de pago — No se realizará un cobro real</p>
+                <div class="card-preview">
+                    <div class="card-visual">
+                        <div class="card-chip"></div>
+                        <div class="card-number-display" id="cardNumberDisplay">•••• •••• •••• ••••</div>
+                        <div class="card-bottom">
+                            <span id="cardNameDisplay">TITULAR</span>
+                            <span id="cardExpDisplay">MM/AA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-form">
+                    <div class="card-field">
+                        <label>Número de tarjeta</label>
+                        <input type="text" id="cardNumber" class="search-input" placeholder="4242 4242 4242 4242" maxlength="19" oninput="formatCardNumber(this)">
+                    </div>
+                    <div class="card-field">
+                        <label>Titular</label>
+                        <input type="text" id="cardName" class="search-input" placeholder="Nombre en la tarjeta" oninput="updateCardPreview()">
+                    </div>
+                    <div class="card-row">
+                        <div class="card-field">
+                            <label>Vencimiento</label>
+                            <input type="text" id="cardExp" class="search-input" placeholder="MM/AA" maxlength="5" oninput="formatCardExp(this)">
+                        </div>
+                        <div class="card-field">
+                            <label>CVV</label>
+                            <input type="text" id="cardCvv" class="search-input" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+                    <div class="card-field">
+                        <label>Monto a pagar</label>
+                        <select id="cardAmount" class="search-input">
+                            <option value="499">Basic - $499</option>
+                            <option value="899" selected>Pro - $899</option>
+                            <option value="1499">Elite - $1499</option>
+                        </select>
+                    </div>
+                    <div class="modal-buttons">
+                        <button onclick="submitCardPayment()" class="save-btn"><i class="fa-solid fa-lock"></i> Pagar $<span id="payAmountDisplay">899</span></button>
+                        <button onclick="closeCardPayment()" class="cancel-btn">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== MI PERFIL ===== -->
+        <div id="section-perfil" class="section-content" style="display:none;">
+            <div class="users-section">
+                <div class="users-header">
+                    <h2>Mi Perfil</h2>
+                </div>
+                <div class="profile-form">
+                    <div class="profile-avatar">
+                        <img id="profileAvatar" src="https://i.pravatar.cc/150" alt="avatar">
+                    </div>
+                    <div class="profile-fields">
+                        <label>Nombre</label>
+                        <input type="text" id="profileName" class="search-input">
+
+                        <label>Correo</label>
+                        <input type="email" id="profileEmail" class="search-input" readonly>
+
+                        <label>Teléfono</label>
+                        <input type="tel" id="profilePhone" class="search-input">
+
+                        <label>Membresía</label>
+                        <input type="text" id="profileMembership" class="search-input" readonly>
+
+                        <label>Miembro desde</label>
+                        <input type="text" id="profileSince" class="search-input" readonly>
+
+                        <button onclick="updateProfile()" class="save-btn">Actualizar Perfil</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/db-sync.js"></script>
+    <script src="js/member.js"></script>
+    <script>DB.sync();</script>
+</body>
+
+</html>

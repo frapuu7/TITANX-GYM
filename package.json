@@ -1,0 +1,15 @@
+{
+  "name": "titanx-fitness",
+  "version": "1.0.0",
+  "description": "TitanX Fitness - Backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "api": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^4.22.2",
+    "sql.js": "^1.14.1"
+  }
+}
