@@ -1,6 +1,6 @@
-Aquí tienes un README más profesional y atractivo para GitHub, ideal para tu portafolio como estudiante de Informática:
 
-# TITANX FITNESS 🏋️‍♂️
+
+# TITANX FITNESS 
 
 ## Sistema Inteligente de Gestión para Gimnasios
 
@@ -10,9 +10,9 @@ Desarrollado con tecnologías modernas como Node.js, Express, SQLite y Bootstrap
 
 ---
 
-## 🚀 Características Principales
+##  Características Principales
 
-### 🔐 Sistema de Autenticación
+###  Sistema de Autenticación
 
 * Inicio de sesión y registro de usuarios.
 * Validación de formularios.
@@ -20,7 +20,7 @@ Desarrollado con tecnologías modernas como Node.js, Express, SQLite y Bootstrap
 * Redirección automática según el rol del usuario.
 * Acceso administrativo protegido.
 
-### 👨‍💼 Panel Administrativo
+###  Panel Administrativo
 
 * Dashboard con estadísticas generales.
 * Gestión completa de miembros (CRUD).
@@ -30,7 +30,7 @@ Desarrollado con tecnologías modernas como Node.js, Express, SQLite y Bootstrap
 * Historial de pagos.
 * Seguimiento de actividad de usuarios.
 
-### 🏃 Panel de Miembros
+###  Panel de Miembros
 
 * Consulta de membresía activa.
 * Generación automática de rutinas.
@@ -40,14 +40,14 @@ Desarrollado con tecnologías modernas como Node.js, Express, SQLite y Bootstrap
 * Historial de pagos.
 * Actualización de perfil personal.
 
-### 💳 Sistema de Pagos
+###  Sistema de Pagos
 
 * Simulación de pagos con tarjeta.
 * Control de vencimientos.
 * Alertas automáticas de pagos próximos.
 * Actualización automática de fechas de renovación.
 
-### 🛒 Landing Page Comercial
+###  Landing Page Comercial
 
 * Presentación del gimnasio.
 * Planes de membresía.
@@ -57,7 +57,7 @@ Desarrollado con tecnologías modernas como Node.js, Express, SQLite y Bootstrap
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+##  Tecnologías Utilizadas
 
 ### Frontend
 
@@ -83,7 +83,7 @@ Desarrollado con tecnologías modernas como Node.js, Express, SQLite y Bootstrap
 
 ---
 
-## 📂 Estructura del Proyecto
+##  Estructura del Proyecto
 
 ```bash
 titanx-fitness/
@@ -112,7 +112,7 @@ titanx-fitness/
 
 ---
 
-## ⚙️ Instalación
+##  Instalación
 
 ### 1. Clonar el repositorio
 
@@ -140,7 +140,7 @@ npm start
 
 ---
 
-## 🌐 Acceso al Sistema
+##  Acceso al Sistema
 
 Una vez iniciado el servidor:
 
@@ -150,7 +150,7 @@ http://localhost:3001
 
 ---
 
-## 🔑 Credenciales de Prueba
+##  Credenciales de Prueba
 
 ### Administrador
 
@@ -167,7 +167,7 @@ Registrar una nueva cuenta desde la pantalla de registro.
 
 ---
 
-## 📡 API REST
+##  API REST
 
 ### Miembros
 
@@ -219,7 +219,7 @@ POST    /api/auth/login
 
 ---
 
-## 📈 Funcionalidades Destacadas
+##  Funcionalidades Destacadas
 
 ✅ Gestión completa de usuarios
 
@@ -243,7 +243,7 @@ POST    /api/auth/login
 
 ---
 
-## 🎯 Objetivo del Proyecto
+##  Objetivo del Proyecto
 
 Este proyecto fue desarrollado como parte de mi portafolio profesional en el área de Desarrollo Web Full Stack y Gestión de Sistemas Informáticos, aplicando conocimientos de:
 
@@ -257,13 +257,13 @@ Este proyecto fue desarrollado como parte de mi portafolio profesional en el ár
 
 ---
 
-## 📄 Licencia
+##  Licencia
 
 Este proyecto se distribuye bajo la licencia MIT.
 
 ---
 
-## 👨‍💻 Autor
+##  Autor
 
 **César Frapu**
 
